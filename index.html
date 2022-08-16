@@ -5,30 +5,52 @@
     <meta charset="utf-8" />
     <title>MOKEPON!</title>
     <script src="./js/script.js"></script>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <h1>MOKEPON! 🔥💧🌱</h1>
     <section id="seleccionar-mascota">
-        <h2>Elige tu mascota:</h2>
-        
-        <input type="radio" name="mascota" id="hypodoge" value="0">
-        <label for="hypodoge">Hypodoge</label>
+        <h1 class="titulo">MOKEPON! 🔥💧🌱</h1>
 
-        <input type="radio" name="mascota" id="catipepo" value="1">
-        <label for="catipepo">Catipepo</label>
-        
-        <input type="radio" name="mascota" id="ratigueya" value="2">        
-        <label for="ratigueya">Ratigueya</label>
-        
-        <input type="radio" name="mascota" id="langostelvis" value="3">
-        <label for="langostelvis">Langostelvis</label>
+        <h2 class="subtitulo">Elige tu mascota:</h2>
 
-        <input type="radio" name="mascota" id="tucapalma" value="4">
-        <label for="tucapalma">Tucapalma</label>
+        <div class="tarjetas">
+            <input type="radio" name="mascota" id="hypodoge" value="0">
+            <label class="tarjeta-de-mokepon" for="hypodoge">
+                <p>Hipodoge</p>
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png" alt="Hipodoge">
+            </label>
 
-        <input type="radio" name="mascota" id="pydos" value="5">
-        <label for="pydos">Pydos</label>
+            <input type="radio" name="mascota" id="catipepo" value="1">
+            <label class="tarjeta-de-mokepon" for="catipepo">
+                <p>Catipepo</p>
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_hipodoge_attack.png" alt="Catipepo">
+            </label>
+
+            <input type="radio" name="mascota" id="ratigueya" value="2">
+            <label class="tarjeta-de-mokepon" for="ratigueya">
+                <p>Ratigueya</p>
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png" alt="Ratigueya">
+            </label>
+
+            <input type="radio" name="mascota" id="langostelvis" value="3">
+            <label class="tarjeta-de-mokepon" for="langostelvis">
+                <p>Langostelvis</p>
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png" alt="Langostelvis">
+            </label>
+
+            <input type="radio" name="mascota" id="tucapalma" value="4">
+            <label class="tarjeta-de-mokepon" for="tucapalma">
+                <p>Tucapalma</p>
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png" alt="Tucapalma">
+            </label>
+
+            <input type="radio" name="mascota" id="pydos" value="5">
+            <label class="tarjeta-de-mokepon" for="pydos">
+                <p>Pydos</p>
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png" alt="Pydos">
+            </label>
+        </div>
 
         <button id="boton-mascota">Seleccionar</button>
     </section>
