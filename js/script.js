@@ -58,7 +58,7 @@ function mascotaSeleccionada(){
   seleccionarMascota.style.display = 'none';
 
   let seleccionarAtaque = document.getElementById('seleccionar-ataque');
-  seleccionarAtaque.style.display = 'block';
+  seleccionarAtaque.style.display = 'flex';
 }
 
 function ataqueSeleccionado(elemento){
@@ -107,7 +107,7 @@ function mostrarMensaje(){
 
 function reiniciar(){
   let seccionReiniciar = document.getElementById('reiniciar');
-  seccionReiniciar.style.display = 'block';
+  seccionReiniciar.style.display = 'flex';
 
   botonFuego.disabled = true;
   botonAgua.disabled = true;
