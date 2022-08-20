@@ -90,6 +90,73 @@ body {
 	margin-bottom: 5rem;
 }
 
+.botones-ataque{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.boton-ataque{
+	width: 15rem;
+    height: 5rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+    color: white;
+    background: transparent;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+#boton-fuego{
+    border-color: orange;
+}
+
+#boton-agua{
+    border-color: aqua;
+}
+
+#boton-tierra{
+    border-color: brown;
+}
+
+#boton-fuego:hover{
+	background-color: orange;
+	color: black;
+}
+
+#boton-agua:hover{
+	background-color: aqua;
+	color: black;
+}
+
+#boton-tierra:hover{
+	background-color: brown;
+	color: black;
+}
+
 input {
 	display: none
+}
+
+#resultado{
+	background: white;
+    margin: 2rem;
+    width: 35rem;
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+	flex-direction: column;
+    font-size: 2rem;
+    align-items: center;
+    border-radius: 2rem;
+    border: 0.2rem solid
+}
+
+#boton-reiniciar{
+	width: 13rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: sandybrown;
+    background: coral;
 }

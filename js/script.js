@@ -90,16 +90,26 @@ function determinarGanador(){
 }
 
 function mostrarMensaje(){
-  let mensajes = document.getElementById('mensajes');
-  let mensaje = document.createElement('p');
-  mensaje.innerText = `Tu mascota atacó con ${ataqueJugador}, las mascota del enemigo atacó con ${ataqueEnemigo} - ${estadoCombate}`;
-  mensajes.appendChild(mensaje);
+  let resultado = document.getElementById('mensaje-resultado');
+  let mensajeAtaqueJugador = document.getElementById('mensaje-ataque-jugador');
+  let mensajeAtaqueEnemigo = document.getElementById('mensaje-ataque-enemigo');
+  
 
-  if(vidasJugador.innerText == 0){
-    mensajes.innerText = 'PERDISTE, estas sin vidas'; 
+  let mensajeJugador = document.createElement('p');
+  let mensajeEnemigo = document.createElement('p');
+
+  resultado.innerText = estadoCombate;
+  mensajeJugador.innerText = ataqueJugador;
+  mensajeEnemigo.innerText = ataqueEnemigo;
+
+  mensajeAtaqueJugador.appendChild(mensajeJugador);
+  mensajeAtaqueEnemigo.appendChild(mensajeEnemigo);
+
+  if(vidasJugador.innerText <= 0){
+    resultado.innerText = 'PERDISTE, estas sin vidas'; 
     reiniciar();
-  }else if(vidadEnemigo.innerText == 0){
-    mensajes.innerText = 'GANASTE, enemigo derrotado'; 
+  }else if(vidadEnemigo.innerText <= 0){
+    resultado.innerText = 'GANASTE, enemigo derrotado'; 
     reiniciar();
   }
 
