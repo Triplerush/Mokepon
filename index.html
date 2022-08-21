@@ -2,7 +2,9 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOKEPON!</title>
     <script src="./js/script.js"></script>
     <link href='css/style.css' rel='stylesheet' type='text/css'>
@@ -20,37 +22,43 @@
             <input type="radio" name="mascota" id="hypodoge" value="0">
             <label class="tarjeta-de-mokepon" for="hypodoge">
                 <p>Hipodoge</p>
-                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png" alt="Hipodoge">
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png"
+                    alt="Hipodoge">
             </label>
 
             <input type="radio" name="mascota" id="catipepo" value="1">
             <label class="tarjeta-de-mokepon" for="catipepo">
                 <p>Catipepo</p>
-                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_hipodoge_attack.png" alt="Catipepo">
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_hipodoge_attack.png"
+                    alt="Catipepo">
             </label>
 
             <input type="radio" name="mascota" id="ratigueya" value="2">
             <label class="tarjeta-de-mokepon" for="ratigueya">
                 <p>Ratigueya</p>
-                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png" alt="Ratigueya">
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png"
+                    alt="Ratigueya">
             </label>
 
             <input type="radio" name="mascota" id="langostelvis" value="3">
             <label class="tarjeta-de-mokepon" for="langostelvis">
                 <p>Langostelvis</p>
-                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png" alt="Langostelvis">
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png"
+                    alt="Langostelvis">
             </label>
 
             <input type="radio" name="mascota" id="tucapalma" value="4">
             <label class="tarjeta-de-mokepon" for="tucapalma">
                 <p>Tucapalma</p>
-                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png" alt="Tucapalma">
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png"
+                    alt="Tucapalma">
             </label>
 
             <input type="radio" name="mascota" id="pydos" value="5">
             <label class="tarjeta-de-mokepon" for="pydos">
                 <p>Pydos</p>
-                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png" alt="Pydos">
+                <img src="https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png"
+                    alt="Pydos">
             </label>
         </div>
 
@@ -65,34 +73,28 @@
             <button id="boton-tierra" class="boton-ataque">Tierra 🌱</button>
         </div>
 
-        <div>
-            <!-- <section id="mensajes" class="mensajes-vida">
-            </section> -->
-            <div id="resultado">
-                <p id="mensaje-resultado">
 
-                </p>
-                <section id="reiniciar">
-                    <button id="boton-reiniciar">Reiniciar</button>
-                </section>
-            </div>
-            <div id="mensaje-ataque-jugador">
+        <div id="resultado">
+            <p id="mensaje-resultado">
 
-            </div>
-            <div id="mensaje-ataque-enemigo">
-
-            </div>
-            
+            </p>
+            <section id="reiniciar">
+                <button id="boton-reiniciar">Reiniciar</button>
+            </section>
         </div>
-        <div class="mensajes-vida">
-            <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador"></span> vidas</p>
-            <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo"></span> vidas</p>
-    
+        <div class="zona-mensajes">
+            <div>
+                <p>Tienes <span id="vidas-jugador"></span> vidas</p>
+                <p id="mascota-jugador"></p> 
+                <div id="mensaje-ataque-jugador"></div>
+            </div>
+            <div>
+                <p>Tiene <span id="vidas-enemigo"></span> vidas el enemigo</p>
+                <p id="mascota-enemigo"></p> 
+                <div id="mensaje-ataque-enemigo"></div>
+            </div>
         </div>
-
-        
     </section>
-    
 </body>
 
 </html>

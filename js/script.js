@@ -1,7 +1,7 @@
 let ataques = ['FUEGO','AGUA','TIERRA'];
 let ataqueJugador,ataqueEnemigo, estadoCombate,botonFuego,botonAgua,botonTierra;
 let vidasJugador;
-let vidadEnemigo;
+let vidasEnemigo;
 
 
 function seleccionarMascota() {
@@ -13,7 +13,7 @@ function seleccionarMascota() {
 
   let botonMascota = document.getElementById("boton-mascota");
   vidasJugador = document.getElementById('vidas-jugador');
-  vidadEnemigo = document.getElementById('vidas-enemigo');  
+  vidasEnemigo = document.getElementById('vidas-enemigo');  
 
   botonMascota.addEventListener("click", mascotaSeleccionada);
 
@@ -50,7 +50,7 @@ function mascotaSeleccionada(){
     let numAleatorio = Math.ceil(Math.random()*(mascotas.length)) -1;
     spanMascotaEnemigo.innerText = mascotas[numAleatorio];
     vidasJugador.innerText = 3;
-    vidadEnemigo.innerText = 3;
+    vidasEnemigo.innerText = 3;
   }else
     console.log('Selecciona una mascota');
 
@@ -75,13 +75,13 @@ function determinarGanador(){
     estadoCombate = 'EMPATE 😄';
   }else if(ataqueJugador == 'FUEGO' &&  ataqueEnemigo =='AGUA'){
     estadoCombate = 'GANASTE 🎉';
-    vidadEnemigo.innerText--;
+    vidasEnemigo.innerText--;
   }else if(ataqueJugador == 'AGUA' &&  ataqueEnemigo =='TIERRA'){
     estadoCombate = 'GANASTE 🎉';
-    vidadEnemigo.innerText--;
+    vidasEnemigo.innerText--;
   }else if(ataqueJugador == 'TIERRA' &&  ataqueEnemigo =='FUEGO'){
     estadoCombate = 'GANASTE 🎉';
-    vidadEnemigo.innerText--;
+    vidasEnemigo.innerText--;
   }else{
     estadoCombate = 'PERDISTE 😦';
     vidasJugador.innerText--;
@@ -108,7 +108,7 @@ function mostrarMensaje(){
   if(vidasJugador.innerText <= 0){
     resultado.innerText = 'PERDISTE, estas sin vidas'; 
     reiniciar();
-  }else if(vidadEnemigo.innerText <= 0){
+  }else if(vidasEnemigo.innerText <= 0){
     resultado.innerText = 'GANASTE, enemigo derrotado'; 
     reiniciar();
   }
