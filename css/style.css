@@ -28,6 +28,7 @@ body {
 	justify-content: center;
 	color: #fff;
 	font-size: 3rem;
+	margin-top: 4rem;
 	margin-bottom: 8rem;
 }
 
@@ -96,34 +97,34 @@ body {
     border-radius: 2rem;
     font-size: 2rem;
     color: white;
-    background: transparent;
+    background: #00415B;
 	margin-left: 1rem;
 	margin-right: 1rem;
 }
 
-#boton-fuego{
+.boton-fuego{
     border-color: orange;
 }
 
-#boton-agua{
+.boton-agua{
     border-color: aqua;
 }
 
-#boton-tierra{
+.boton-tierra{
     border-color: brown;
 }
 
-#boton-fuego:hover{
+.boton-fuego-hover:hover{
 	background-color: orange;
 	color: black;
 }
 
-#boton-agua:hover{
+.boton-agua-hover:hover{
 	background-color: aqua;
 	color: black;
 }
 
-#boton-tierra:hover{
+.boton-tierra-hover:hover{
 	background-color: brown;
 	color: black;
 }
@@ -186,4 +187,13 @@ input:checked + label {
 		align-items: center;
 		gap: 1rem;
 	}
+	.zona-mensajes,#resultado{
+		width: 30rem;
+	}
+	.titulo{
+		font-size: 1.8rem;
+		padding: .5rem;
+		height: 100%;
+	}
+
 }
