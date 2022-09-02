@@ -27,9 +27,9 @@ body {
 	display: flex;
 	justify-content: center;
 	color: #fff;
-	font-size: 3rem;
+	font-size: 3.5rem;
 	margin-top: 4rem;
-	margin-bottom: 8rem;
+	margin-bottom: 5rem;
 }
 
 .subtitulo {
@@ -174,8 +174,17 @@ input:checked + label {
 .zona-mensajes p{
 	margin: 1rem;
 	color: seagreen;
+	text-align:center
+}
+#ver-mapa{
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
+#mapa{
+	border: 2px solid white;
+}
 
 @media (max-width: 375px) {
 	.tarjetas{
