@@ -19,6 +19,11 @@ const mapa = document.getElementById("mapa");
 let lienzo = mapa.getContext("2d");
 let mokemap = new Image();
 mokemap.src = "../img/mokemap.png";
+let anchoDelMapa = Math.min(window.innerWidth - 100, 500);
+let alturaDelMapa = anchoDelMapa * 600 / 800;
+
+mapa.width = anchoDelMapa;
+mapa.height = alturaDelMapa;
 
 let ataqueJugador = [],
   secuenciaCombate = [],
@@ -42,6 +47,7 @@ class Mokepon {
     this.ataques = ataques;
     this.x = x;
     this.y = y;
+    this.velocidad = 5;
     this.ancho = 40;
     this.alto = 40;
     this.mapaFoto = new Image();
@@ -169,7 +175,6 @@ function mascotaSeleccionada() {
     sectionVerMapa.style.display = "flex";
     moverTeclado();
     pintarCanvas();
-    //seleccionarAtaque.style.display = "flex";
   } else console.log("Selecciona una mascota");
 }
 
@@ -187,7 +192,6 @@ function determinarGanador() {
     ataqueEnemigo.push(ataque.nombre);
   });
   ataqueEnemigo = ataqueEnemigo.sort(() => Math.random() - 0.5);
-  console.log(ataqueEnemigo);
 
   for (let i = 0; i < ataqueJugador.length; i++) {
     if (ataqueEnemigo[i] == ataqueJugador[i]) {
@@ -226,8 +230,7 @@ function mostrarMensaje() {
 }
 
 function pintarCanvas() {
-  mapa.width = 320;
-  mapa.height = 240;
+
 
   lienzo.clearRect(0, 0, mapa.width, mapa.height);
   lienzo.drawImage(mokemap, 0, 0, mapa.width, mapa.height);
@@ -237,7 +240,7 @@ function pintarCanvas() {
 
 function moverArriba() {
   interval = setInterval(() => {
-    mascota.y -= 5;
+    mascota.y -= mascota.velocidad;
     pintarCanvas();
   }, 50);
   revisarColision(mascotaEnemigo)
@@ -245,7 +248,7 @@ function moverArriba() {
 
 function moverAbajo() {
   interval = setInterval(() => {
-    mascota.y += 5;
+    mascota.y += mascota.velocidad;
     pintarCanvas();
   }, 50);
   revisarColision(mascotaEnemigo)
@@ -253,7 +256,7 @@ function moverAbajo() {
 
 function moverDerecha() {
   interval = setInterval(() => {
-    mascota.x += 5;
+    mascota.x += mascota.velocidad;
     pintarCanvas();
   }, 50);
   revisarColision(mascotaEnemigo)
@@ -261,14 +264,13 @@ function moverDerecha() {
 
 function moverIzquierda() {
   interval = setInterval(() => {
-    mascota.x -= 5;
+    mascota.x -= mascota.velocidad;
     pintarCanvas();
   }, 50);
   revisarColision(mascotaEnemigo)
 }
 
 function pararMovimiento() {
-
   clearInterval(interval);
 }
 
@@ -288,16 +290,16 @@ function definirGanador() {
 function moverTeclado() {
   window.addEventListener("keydown", (e) => {
     if (e.key === "ArrowUp") {
-      mascota.y -= 5;
+      mascota.y -= mascota.velocidad;
       pintarCanvas();
     } else if (e.key === "ArrowDown") {
-      mascota.y += 5;
+      mascota.y += mascota.velocidad;
       pintarCanvas();
     } else if (e.key === "ArrowLeft") {
-      mascota.x -= 5;
+      mascota.x -= mascota.velocidad;
       pintarCanvas();
     } else if (e.key === "ArrowRight") {
-      mascota.x += 5;
+      mascota.x += mascota.velocidad;
       pintarCanvas();
     }
     revisarColision(mascotaEnemigo)
@@ -326,6 +328,11 @@ function revisarColision(enemigo) {
     return;
   }
   pararMovimiento();
-  alert("Hay colision" + enemigo.nombre);
+  mascota.x--;
+  mascota.y--;
+  mascota.velocidad = 0;
+  sectionVerMapa.style.display = "none";
+  seleccionarAtaque.style.display = "flex";
+
 }
 window.addEventListener("load", seleccionarMascota);

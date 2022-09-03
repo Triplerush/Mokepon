@@ -45,161 +45,202 @@ body {
 
 .tarjeta-de-mokepon {
 	width: 18rem;
-    height: 22rem;
-    background: #11468f;
-    padding: 10px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
+	height: 22rem;
+	background: #11468f;
+	padding: 10px;
+	box-sizing: border-box;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-    color: #fff;
+	color: #fff;
 }
 
 .tarjeta-de-mokepon img {
 	width: 17rem;
 	padding: 1rem;
 }
-.tarjeta-de-mokepon p{
+
+.tarjeta-de-mokepon p {
 	display: inline;
 }
 
 #boton-mascota {
-    width: 16rem;
-    height: 4rem;
-    border-radius: 2rem;
-    background: transparent;
-    border: 2px solid white;
-    color: white;
+	width: 16rem;
+	height: 4rem;
+	border-radius: 2rem;
+	background: transparent;
+	border: 2px solid white;
+	color: white;
 	margin-top: 2rem;
 }
 
-#boton-mascota:hover{
+#boton-mascota:hover {
 	color: #11468f;
 	background: white;
 
 }
 
-#seleccionar-ataque{
+#seleccionar-ataque {
 	flex-direction: column;
 	align-items: center;
 }
 
-.botones-ataque{
+.botones-ataque {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 }
 
-.boton-ataque{
+.boton-ataque {
 	width: 15rem;
-    height: 5rem;
-    border-radius: 2rem;
-    font-size: 2rem;
-    color: white;
-    background: #00415B;
+	height: 5rem;
+	border-radius: 2rem;
+	font-size: 2rem;
+	color: white;
+	background: #00415B;
 	margin-left: 1rem;
 	margin-right: 1rem;
 }
 
-.boton-fuego{
-    border-color: orange;
+.boton-fuego {
+	border-color: orange;
 }
 
-.boton-agua{
-    border-color: aqua;
+.boton-agua {
+	border-color: aqua;
 }
 
-.boton-tierra{
-    border-color: brown;
+.boton-tierra {
+	border-color: brown;
 }
 
-.boton-fuego-hover:hover{
+.boton-fuego-hover:hover {
 	background-color: orange;
 	color: black;
 }
 
-.boton-agua-hover:hover{
+.boton-agua-hover:hover {
 	background-color: aqua;
 	color: black;
 }
 
-.boton-tierra-hover:hover{
+.boton-tierra-hover:hover {
 	background-color: brown;
 	color: black;
 }
 
-input{
+input {
 	display: none;
 }
 
-input:checked + label {
+input:checked+label {
 	background-color: #8FE3CF;
 }
 
-#resultado{
+#resultado {
 	background: white;
-    margin: 2rem;
-    width: 35rem;
-    height: 10rem;
-    display: flex;
-    justify-content: space-around;
+	margin: 2rem;
+	width: 35rem;
+	height: 10rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-around;
 	flex-direction: column;
-    font-size: 2rem;
-    align-items: center;
-    border-radius: 2rem;
-    border: 0.2rem solid
+	font-size: 2rem;
+	align-items: center;
+	border-radius: 2rem;
+	border: 0.2rem solid
 }
 
-#boton-reiniciar{
+#boton-reiniciar {
 	width: 13rem;
-    height: 3.5rem;
-    border-radius: 1rem;
-    font-size: 2rem;
-    color: sandybrown;
-    background: coral;
+	height: 3.5rem;
+	border-radius: 1rem;
+	font-size: 2rem;
+	color: sandybrown;
+	background: coral;
 }
 
-.zona-mensajes{
+.zona-mensajes {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    background-color: white;
-    border-radius: 1rem;
-    border: 2px solid black;
-    width: 50rem;
-	justify-items:center;
+	grid-template-rows: 1fr;
+	background-color: white;
+	border-radius: 1rem;
+	border: 2px solid black;
+	width: 50rem;
+	justify-items: center;
 }
 
-.zona-mensajes p{
+.zona-mensajes p {
 	margin: 1rem;
 	color: seagreen;
-	text-align:center
+	text-align: center
 }
-#ver-mapa{
+
+#ver-mapa {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
-#mapa{
-	border: 2px solid white;
+
+#ver-mapa button:hover {
+	color: #11468f;
+	background: white;
 }
 
-@media (max-width: 375px) {
-	.tarjetas{
+#ver-mapa button {
+	width: 10rem;
+	height: 4rem;
+	border-radius: 20px;
+	background: transparent;
+	border: 2px solid white;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	margin: 10px 0 0;
+}
+
+#boton-pelear {
+	width: 15rem;
+	height: 5rem;
+	border-radius: 2rem;
+	background: transparent;
+	border: 2px solid white;
+	color: white;
+	margin-top: 2rem;
+	font-size: 2rem;
+	align-items: center;
+	justify-content: center;
+}
+
+#boton-pelear:hover {
+	color: #11468f;
+	background: white;
+}
+
+@media (max-width: 390px) {
+	h1{
+		font-size: 3rem;
+	}
+
+	.tarjetas {
 		flex-direction: column;
 	}
 
-	.botones-ataque{
+	.botones-ataque {
 		flex-direction: column;
 		align-items: center;
 		gap: 1rem;
 	}
-	.zona-mensajes,#resultado{
-		width: 30rem;
+
+	.zona-mensajes,
+	#resultado {
+		width: 35rem;
 	}
-	.titulo{
+
+	.titulo {
 		font-size: 1.8rem;
 		padding: .5rem;
 		height: 100%;
